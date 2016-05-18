@@ -5,14 +5,14 @@ Embroid-It is an open source editing software for use in machine embroidery desi
 
 ## The Software
 
-<Explain software usage>
+\<Explain software usage\>
 
 ### Version
-<Version information>
+\<Version information\>
 
 ### Installation
 
-<Installation instructions here>
+\<Installation instructions here\>
 
 
 ## Development
@@ -27,14 +27,17 @@ The EmbLib library provides the structures necessary for representing a pattern,
 
 The Embroid-It front end is constructed using the JavaFX Scenebuilder 2.0 Visual Layout Tool. The link to download the tool and information on how to get started with its basic use are provided at the following links.
 
-* <Link to download>
-* <Link to information about how to use>
+* \<Link to download\>
+* \<Link to information about how to use\>
 
 
 ##Authors
 
-<Put our information here>
+Initial work on the project come from the following contributors:
 
+* Christopher Park  (Email) - EmbLib framework library development & Documenation.
+* Trae Rawls        (Email) - JavaFX Scenebuilder event controller & user interaction development.
+* Nate Owens        (Email) - Scenebuilder GUI visual design & Documentation 
 
 ## License
 
@@ -56,4 +59,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 Thanks goes out to the Embroidermodder open source project and its developers for code used in the development and design of the project format and PES file support.
 
-<Embroidermodder link>
+Be sure to check out their project!
+
+[Embroidermodder](https://github.com/Embroidermodder/Embroidermodder)
