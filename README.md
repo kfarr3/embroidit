@@ -35,7 +35,11 @@ The Embroid-It front end is constructed using the JavaFX Scenebuilder 2.0 Visual
 
 ##Authors
 
-Initial work on the project come from the following contributors:
+Project sponsor:
+
+*  Ken Farr
+
+Initial contributors:
 
 * Christopher Park  (Email) - EmbLib framework library development & Documenation.
 * Trae Rawls        (Email) - JavaFX Scenebuilder event controller & user interaction development.
@@ -43,7 +47,7 @@ Initial work on the project come from the following contributors:
 
 ## License
 
-Embroid-It is provided under the BSD 3-Clause License. Please see License.md for more information.
+Embroid-It is provided under the BSD 3-Clause License. Please see the License for more information.
 
 ## Acknowledgements
 
