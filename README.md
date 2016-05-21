@@ -17,13 +17,11 @@ Embroid-It is an open source editing software for use in machine embroidery desi
 
 ## Development
 
-The project is open source and provided under the BDS 3-Clause Licensce. We encourage developers to use, and modify the project as they see fit.
+The project is open source and provided under the BDS 3-Clause License. We encourage developers to use, and modify the project as they see fit.
 
 ### EmbLib Documentation
 
-the EmbLib library contains the basic structures necessary for representing a pattern. It also contains collections of algorithms for use is fill stitching and file management. All library methods are explained in the provided Javadocs.
-
-The EmbLib library provides the structures necessary for representing a pattern, basic algorithms for the fill stitching of shapes, 
+the EmbLib library contains the basic structures necessary for representing a pattern. It also contains collections of algorithms for use in fill stitching and file management. All library methods are explained in the provided \<link havadocs here\> Javadocs.
 
 ### The GUI
 
@@ -47,7 +45,7 @@ Initial contributors:
 
 ## License
 
-Embroid-It is provided under the BSD 3-Clause License. Please see the License for more information.
+Embroid-It is provided under the BSD 3-Clause License. Please see the License file for more information.
 
 ## Acknowledgements
 
