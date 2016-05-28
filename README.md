@@ -2,7 +2,7 @@
 
 Embroid-It is an open source editing software for use in machine embroidery design. The application was started by a group of undergraduate students at Eastern Washington University as a senior capstone. Written in Java, the application uses the JavaFX API for shape representation, and has support for the PES file format. The project is provided as open source under the BSD 3-Clause license.
 
-## Development
+### Development
 
 The project is open source and provided under the BDS 3-Clause License. We encourage developers to use, and modify the project as they see fit.
 
@@ -30,7 +30,7 @@ the EmbLib library contains the basic structures necessary for representing a pa
 
 Current Version - 1.0
 
-##Authors
+###Authors
 
 Project sponsor:
 
@@ -42,11 +42,11 @@ Initial contributors:
 * Trae Rawls       - JavaFX Scenebuilder event controller & user interaction development.
 * Nate Owens       - Scenebuilder GUI visual design & Documentation 
 
-## License
+### License
 
 Embroid-It is provided under the BSD 3-Clause License. Please see the [License](https://github.com/Embroid-It/embroidit/blob/master/LICENSE) file for more information.
 
-## Acknowledgements
+### Acknowledgements
 
 Thanks goes out to the Embroidermodder open source project and its developers for code used in the development and design of the project format and PES file support.
 
