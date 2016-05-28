@@ -2,6 +2,8 @@
 
 Embroid-It is an open source editing software for use in machine embroidery design. The application was started by a group of undergraduate students at Eastern Washington University as a senior capstone. Written in Java, the application uses the JavaFX API for shape representation, and has support for the PES file format. The project is provided as open source under the BSD 3-Clause license.
 
+***
+
 ### Development
 
 The project is open source and provided under the BDS 3-Clause License. We encourage developers to use, and modify the project as they see fit.
@@ -25,6 +27,8 @@ There are two parts to the project. The Embroid-It GUI, and the EmbLib library p
 #### EmbLib Documentation
 
 the EmbLib library contains the basic structures necessary for representing a pattern. It also contains collections of algorithms for use in fill stitching and file management. All library methods are explained in the provided \<link javadocs here\> Javadocs.
+
+***
 
 #### Version
 
