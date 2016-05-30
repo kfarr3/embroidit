@@ -26,7 +26,7 @@ There are two parts to the project. The Embroid-It GUI, and the EmbLib library p
 
 #### EmbLib Documentation
 
-the EmbLib library contains the basic structures necessary for representing a pattern. It also contains collections of algorithms for use in fill stitching and file management. All library methods are explained in the provided \<link javadocs here\> Javadocs.
+the EmbLib library contains the basic structures necessary for representing a pattern. It also contains collections of algorithms for use in fill stitching and file management. All library methods are explained in the provided [Javadocs](https://github.com/Embroid-It/embroidit/tree/master/EmbLib/dist). Once cloned, double click the index.html file within the Javadoc directory inside of the dist folder.
 
 ***
 
