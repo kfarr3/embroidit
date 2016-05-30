@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="embroid.it.FXMLDocumentController">
+   <top>
+      <VBox id="topContainer" prefHeight="22.0" prefWidth="1000.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <MenuBar id="menuBar">
+              <menus>
+                <Menu id="save" mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#menuNewFile" text="New">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuOpenFile" text="Open">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuSaveFile" text="Save">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuSaveFile" text="Save As..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuItemImport" mnemonicParsing="false" onAction="#menuImportFile" text="Import">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuExportFile" text="Export">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Exit">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F4" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                      <MenuItem fx:id="undoMenuItem" mnemonicParsing="false" onAction="#undoChange" text="Undo">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="redoMenuItem" mnemonicParsing="false" onAction="#redoChange" text="Redo">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuGettingStarted" text="Getting Started">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F1" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                      <MenuItem mnemonicParsing="false" onAction="#menuAbout" text="About Embroid-It" />
+                        <MenuItem mnemonicParsing="false" text="Developer Documentation" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox id="leftContainer" alignment="TOP_CENTER" prefHeight="579.0" prefWidth="57.0" style="-fx-background-color: C8C8C8;" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="shapeLayerButton" fx:id="undoButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#undoChange" prefHeight="40.0" prefWidth="40.0" text="Undo" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/Undo.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Undo the last operation" />
+               </tooltip>
+            </Button>
+            <Button id="shapeLayerButton" fx:id="redoButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#redoChange" prefHeight="40.0" prefWidth="40.0" text="Redo" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/Redo.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Redo" />
+               </tooltip>
+            </Button>
+            <Button id="lineButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#lineDrawingMode" prefHeight="40.0" prefWidth="40.0" text="Line">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/Line.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Create a line" />
+               </tooltip>
+            </Button>
+            <Button id="rectButton" fx:id="rectButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rectDrawingMode" prefHeight="40.0" prefWidth="40.0" text="Rect">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/Rect.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Create a rectangle" />
+               </tooltip>
+            </Button>
+            <Button id="ovalButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ellipseDrawingMode" prefHeight="40.0" prefWidth="40.0" text="Oval">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/Oval.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Create an oval" />
+               </tooltip>
+            </Button>
+            <Separator prefHeight="13.0" prefWidth="57.0" />
+            <ColorPicker fx:id="colorPicker" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0">
+               <tooltip>
+                  <Tooltip text="Change the thread color" />
+               </tooltip></ColorPicker>
+         </children>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </VBox>
+   </left>
+   <bottom>
+      <VBox id="botContainer" prefHeight="38.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar id="toolBar" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: C8C8C8;">
+               <items>
+                  <Label fx:id="coordinateLabel" alignment="CENTER" text="Coordinates" />
+               </items></ToolBar>
+         </children>
+      </VBox>
+   </bottom>
+   <right>
+      <VBox id="rightContainer" prefHeight="579.0" prefWidth="224.0" style="-fx-background-color: C8C8C8;" BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane animated="false" prefHeight="211.0" prefWidth="224.0" text="Object Properties">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="179.0" prefWidth="222.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="8.0" text="X:" fx:id="xLabel" />
+                        <TextField layoutX="49.0" layoutY="4.0" prefHeight="25.0" prefWidth="52.0" fx:id="xField" />
+                        <Label fx:id="yLabel" layoutX="131.0" layoutY="8.0" text="Y:" />
+                        <TextField fx:id="yField" layoutX="152.0" layoutY="2.0" prefHeight="25.0" prefWidth="52.0" />
+                        <TextField fx:id="heightField" layoutX="63.0" layoutY="80.0" prefHeight="25.0" prefWidth="95.0" />
+                        <Label fx:id="heightLabel" layoutX="11.0" layoutY="84.0" text="Height:" />
+                        <Label fx:id="widthLabel" layoutX="13.0" layoutY="113.0" text="Width:" />
+                        <TextField fx:id="widthField" layoutX="63.0" layoutY="109.0" prefHeight="25.0" prefWidth="95.0" />
+                        <Button fx:id="changeButton" layoutX="117.0" layoutY="146.0" mnemonicParsing="false" onAction="#editShape" prefHeight="25.0" prefWidth="62.0" text="Change">
+                           <tooltip>
+                              <Tooltip text="Confirm property changes" />
+                           </tooltip></Button>
+                        <Button fx:id="deleteButton" layoutX="45.0" layoutY="146.0" mnemonicParsing="false" onAction="#deleteShape" prefHeight="25.0" prefWidth="62.0" text="Delete">
+                           <tooltip>
+                              <Tooltip text="Delete the selected shape" />
+                           </tooltip></Button>
+                        <Label fx:id="endXLabel" layoutX="7.0" layoutY="43.0" text="End X:" />
+                        <TextField fx:id="endXField" layoutX="49.0" layoutY="39.0" prefHeight="25.0" prefWidth="52.0" />
+                        <Label fx:id="endYLabel" layoutX="109.0" layoutY="43.0" text="End Y:" />
+                        <TextField fx:id="endYField" layoutX="152.0" layoutY="39.0" prefHeight="25.0" prefWidth="52.0" />
+                     </children></AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane fx:id="shapeListContainer" animated="false" prefHeight="428.0" prefWidth="224.0" text="Shape List">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="222.0">
+                     <children>
+                        <ListView fx:id="shapeListView" layoutX="-1.0" layoutY="-3.0" minWidth="-Infinity" prefHeight="429.0" prefWidth="224.0" />
+                        <ScrollBar layoutX="208.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="14.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox id="centerContainer" fx:id="centerContainer" alignment="TOP_CENTER" prefHeight="597.0" prefWidth="719.0" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane id="layerOptions" alignment="CENTER" columnHalignment="CENTER" prefHeight="50.0" prefWidth="719.0" style="-fx-background-color: C8C8C8;">
+               <children>
+                  <Button id="shapeLayerButton" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" mnemonicParsing="false" onAction="#buttonShapeLayerPressed" prefHeight="44.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="SHAPE" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@res/Shapes.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Switch to the shape layer" />
+                     </tooltip>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button id="stitchLayerButton" alignment="CENTER" graphicTextGap="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonStitchLayerPressed" prefHeight="44.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="STITCH">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@res/Stitch2.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Switch to the stitch layer" />
+                     </tooltip>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="BOTTOM_CENTER" columnHalignment="CENTER" prefHeight="27.0" prefWidth="719.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="499.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/horizontalScale.gif" />
+                     </image>
+                     <FlowPane.margin>
+                        <Insets left="22.0" />
+                     </FlowPane.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </FlowPane>
+            <HBox alignment="TOP_CENTER" prefHeight="483.0" prefWidth="719.0">
+               <children>
+                  <ImageView fitHeight="499.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/vertScale.gif" />
+                     </image>
+                  </ImageView>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="500.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="500.0" />
+                        <Canvas fx:id="previewLayer" height="500.0" width="500.0" />
+                        <Canvas fx:id="shapeLayer" height="500.0" width="500.0" />
+                        <Canvas fx:id="stitchLayer" height="500.0" visible="false" width="500.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
