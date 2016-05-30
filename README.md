@@ -22,7 +22,7 @@ Tutorials/Documentation:
 
 #### Using the Project Files
 
-There are two parts to the project. The Embroid-It GUI, and the EmbLib library project. You can run the application from the Embroid-It project inside Netbeans, or from the Embroid-It dist folder directly.
+There are two parts to the project. The Embroid-It GUI, and the EmbLib library project. You can run the application from the Embroid-It project inside Netbeans, or from the Embroid-It dist folder directly. The application quick start guide can be reached from the help menu. (**Help -> Getting Started**)
 
 #### Linking EmbLib to Embroid-It
 
