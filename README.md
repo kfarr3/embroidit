@@ -42,13 +42,13 @@ Current Version - 1.0
 
 Project sponsor:
 
-*  Ken Farr
+*  [Ken Farr](https://github.com/kfarr3)
 
 Contributors:
 
-* Christopher Park - EmbLib framework library development & Documenation.
-* Trae Rawls       - JavaFX Scenebuilder event controller & user interaction development.
-* Nate Owens       - Scenebuilder GUI visual design & Documentation 
+* [Christopher Park](https://github.com/ParkChristopher) - EmbLib framework library development & Documenation.
+* [Trae Rawls](https://github.com/traelrawls)       - JavaFX Scenebuilder event controller & user interaction development.
+* [Nate Owens](https://github.com/nateowens)       - Scenebuilder GUI visual design & Documentation 
 
 #### License
 
